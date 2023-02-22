@@ -1,0 +1,25 @@
+<div class="row rounded border m-2">
+  <div class="col-lg-3">
+    <!--TODO: src format-->
+    <img [src]="book.cover" width="120" height="120" class="m-2"/>
+  </div>
+  <div class="col-lg-7 mt-3">
+    <h5>{{ book.title }}</h5>
+    <div class="row mt-5">
+      <div class="col-lg-6">
+        <p>Review: {{book.reviewsNumber | number}}</p>
+      </div>
+      <div class="col-lg-6">
+        <p>Rating: {{book.rating | number: '1.1-1'}}</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-2">
+    <a>
+      Show
+    </a>
+    <a>
+      Edit
+    </a>
+  </div>
+</div>

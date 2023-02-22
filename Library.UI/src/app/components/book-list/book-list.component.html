@@ -1,0 +1,23 @@
+<ul ngbNav #nav="ngbNav" class="nav-tabs">
+  <li ngbNavItem>
+    <a ngbNavLink>All</a>
+    <ng-template ngbNavContent>
+      <div class="row scroll border rounded">
+        <p *ngIf="loading" class="text-center text-lg">Loading...</p>
+        <app-book-list-item class="col-lg-6" *ngFor="let book of books$|async" [book]="book"></app-book-list-item>
+      </div>
+    </ng-template>
+  </li>
+  <li ngbNavItem>
+    <a ngbNavLink>Recommend</a>
+    <ng-template ngbNavContent>
+      <div class="row scroll border rounded">
+        <p *ngIf="loading" class="text-center text-lg">Loading...</p>
+        <app-book-list-item class="col-lg-6" *ngFor="let recommendedBook of recommendedBooks$|async"
+          [book]="recommendedBook"></app-book-list-item>
+      </div>
+    </ng-template>
+  </li>
+</ul>
+
+<div [ngbNavOutlet]="nav"></div>
