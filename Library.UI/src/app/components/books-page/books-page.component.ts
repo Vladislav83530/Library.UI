@@ -6,5 +6,4 @@ import { Component } from '@angular/core';
   styleUrls: ['./books-page.component.css']
 })
 export class BooksPageComponent {
-  title = "Library"
 }

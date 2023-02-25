@@ -10,6 +10,9 @@ import { BookListItemComponent } from './components/book-list-item/book-list-ite
 import { EditBookComponent } from './components/edit-book/edit-book.component';
 import { ViewBookComponent } from './components/view-book/view-book.component';
 import { NgbNavConfig, NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { ReactiveFormsModule } from '@angular/forms';
+
+
 
 @NgModule({
   declarations: [
@@ -18,13 +21,14 @@ import { NgbNavConfig, NgbModule } from '@ng-bootstrap/ng-bootstrap';
     BookListComponent,
     BookListItemComponent,
     EditBookComponent,
-    ViewBookComponent
+    ViewBookComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    NgbModule
+    NgbModule,
+    ReactiveFormsModule
   ],
   providers: [NgbNavConfig],
   bootstrap: [AppComponent]
