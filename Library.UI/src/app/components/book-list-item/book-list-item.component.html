@@ -1,0 +1,28 @@
+<div class="row rounded border m-2">
+  <div class="col-lg-3">
+    <img [src]="book.cover" width="120" height="120" class="m-2" />
+  </div>
+  <div class="col-lg-7 mt-3">
+    <h5>{{ book.title }}</h5>
+    <div class="row mt-5">
+      <div class="col-lg-6">
+        <p>
+          <img class="m-1 mb-2" src="https://cdn-icons-png.flaticon.com/512/2839/2839244.png" width="20" height="20">
+          Review: <span class="fw-bold">{{book.reviewsNumber | number}}</span>
+        </p>
+      </div>
+      <div class="col-lg-6">
+        <p>
+          <img class="m-1 mb-2" src="https://cdn-icons-png.flaticon.com/512/9554/9554630.png" width="20" height="20">
+          Rating: <span class="fw-bold">{{book.rating | number: '1.1-1'}}</span>
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-2 pt-3">
+      <app-view-book class="m-1" [id]="book.id"></app-view-book>
+      <a class="pe-auto m-1"  (click)="editBook()">
+        <img class="mb-1"  src="https://cdn-icons-png.flaticon.com/512/2355/2355330.png" width="25" height="25">
+      </a>
+  </div>
+</div>
